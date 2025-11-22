@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import Home from './pages/Home'
-import Loadingpage from './pages/Loadingpage'
-import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CameraCapturePage from './pages/CameraCapturePage';
 
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          {/* <Route path='/' element={<Loadingpage/>}></Route> */}
-        </Routes>
-      </Router>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/capture" element={<CameraCapturePage />} />
+        <Route path="/" element={<h1>라우팅 예시</h1>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
